@@ -1,350 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lan="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Potter World</title>
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Georgia', serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width,initial-scale= 1.0">
 
-        body {
-            background: linear-gradient(135deg, #f0f0ff 0%, #e6e6ff 100%);
-            color: #3a0f50;
-            line-height: 1.6;
-            text-align: center;
-            font-size: 126%;
-        }
+  <title>Responsive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
 
-        /* Header Styles */
-        header {
-            background: linear-gradient(to right, #3a0f50, #5a2070);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+    body {
+      margin: 0;
+      background-color: #F6F4F0;
+      font-family: kanit;
+      line-height: 1.6;
+      color: black;
+      text-align: center;
+      size: 200%;
+    }
 
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 1rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    h2 {
+      color: #001A6E;
+      font-size: 300%;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
+    header h2 {
+      font-size: 100;
+      font-style: italic;
+    }
 
-        nav a {
-            color: #3a0f50;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #001A6E;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      width: 70%;
+      border-radius: 40px;
+      margin: 2% 17%;
+    }
 
-        nav a:hover {
-            background: #3a0f50;
-            color: white;
-        }
 
-        /* Section Styles */
-        section {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
 
-        section h2 {
-            color: #3a0f50;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            font-style: italic;
-        }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
 
-        /* Characters Grid */
-        .characters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
+    #home {
+      margin: 8rem auto;
+      background-color: #bdcafb;
+      color: black;
+      padding: 8rem 4%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 90%;
+      border-radius: 50px;
+    }
 
-        .character-card {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
 
-        .character-card:hover {
-            transform: translateY(-5px);
-        }
+    #home h1 {
+      font-size: 500%;
+      margin-left: 4%;
+      margin-bottom: 2%;
+      line-height: 1;
+      color: #001A6E;
+    }
 
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
+    #home p {
+      margin: 4% 4%;
+      line-height: 1.6;
+      font-size: 130%;
+    }
 
-        .gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
+    .profile-pic {
+      align-content: center;
+      max-height: 350px;
+      max-width: 300px;
+      border-radius: 20%;
+      box-shadow: 2px 5px 15px #12263d;
+    }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+    #about {
+      margin: 2% 6%;
+      padding: 7rem 4rem;
+      font-size: 180%;
 
-        video{
-            border-radius: 30px;
-        }
-        /* House Points Table */
-        .house-points {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
+    }
 
-        .house-points th,
-        .house-points td {
-            padding: 1rem;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
+    #about h3 {
+      text-decoration: underline;
+      color: rgb(60, 35, 4);
+    }
 
-        .house-points th {
-            background: #3a0f50;
-            color: white;
-        }
+    .education {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 3rem auto;
+    }
 
-        .house-points tr:nth-child(even) {
-            background: #f8f8ff;
-        }
+    .edu_item {
+      background-color: #c4d0fe;
+      border-radius: 20px;
+      box-shadow: 5px 8px 1px #12263d;
+      margin: 12px;
+      padding: 1%;
+      text-align: center;
+      font-size: 25px;
+    }
 
-        .house-points img{
-            width: 70px;
-            height: 70px;
-            padding: 0%;
-            margin: 0%;
-        }
-        /* .gryffindor { background: #740001; }
-        .slytherin { background: #1a472a; }
-        .ravenclaw { background: #0e1a40; }
-        .hufflepuff { background: #ecb939; } */
+    #skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2% 6%;
+      padding: 7rem 4rem;
+      font-size: 180%;
 
-        /* Resources */
-        .resources-list {
-            list-style: none;
-            text-align: center;
-            text-decoration: underline;
-        }
+    }
 
-        .resources-list a {
-            color: #3a0f50;
-            text-decoration: none;
-            font-size: 1.2rem;
-            line-height: 2;
-            transition: color 0.3s ease;
-        }
+    .tech {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      justify-content: center;
+      margin: 3%;
+    }
 
-        .resources-list a:hover {
-            color: #5a2070;
-            text-decoration: underline;
-        }
+    .skills_item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 4px 8px 0px #001A6E;
+      background-color: #bdcafb;
+      color: black;
+      border-radius: 20px;
+      max-width: 170px;
+      max-height: 175px;
+      box-sizing: border-box;
+      margin-top: 3%;
+      padding: 2%;
+      transition: all 0.3s ease;
+    }
 
-        /* Winner Animation */
-        .winner {
-            text-align: center;
-            font-size: 2rem;
-            color: #3a0f50;
-            margin-top: 2rem;
-            animation: pulse 2s infinite;
-        }
+    .skills_item:hover {
+      transform: scale(1.1);
+      background-color: #001A6E;
+      box-shadow: 6px 10px 0px #bdcafb;
+      color: #F6F4F0;
+      cursor: pointer;
+    }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+    .skills_item img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+      padding: 0;
+      margin: 0;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
+    #projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2% 6%;
+      padding: 7rem 4rem;
+      line-height: 1.5;
+    }
 
-            header h1 {
-                font-size: 2rem;
-            }
+    .phead {
+      font-size: 90px;
+    }
 
-            section {
-                padding: 1rem;
-            }
+    .proj {
+      display: flex;
+      justify-content: center;
+      gap: 3%;
+      margin-top: 5%;
 
-            .characters-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-        }
-    </style>
+    }
+
+    .project-item {
+      background-color: #c4d0fe;
+      width: 30%;
+      border: 2px solid #001A6E;
+      box-shadow: 8px 8px 10px;
+      border-radius: 40px;
+    }
+
+    .project-item h3 {
+      font-size: 150%;
+      margin-top: 10%;
+      line-height: 1.2;
+      margin: 10% 9% 0;
+      color: #001A6E;
+    }
+
+    .project-item p {
+      margin-top: 5%;
+      font-size: 110%;
+      max-width: 85%;
+      margin-left: 8%;
+    }
+
+    .project-item video {
+      margin: 9% 0;
+      border-radius: 20px;
+      box-shadow: 3px 5px 7px black;
+    }
+
+    .cinfo {
+      font-size: 25px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to the Wizarding World of Harry Potter</h1>
-    </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#characters">Characters</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#resources">Resources</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Harry Potter</h2>
-            <p>Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends, Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's conflict with Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).</p>
-            <p>The series was originally published in English by Bloomsbury in the United Kingdom and Scholastic Press in the United States. A series of many genres, including fantasy, drama, coming-of-age fiction, and the British school story (which includes elements of mystery, thriller, adventure, horror, and romance), the world of Harry Potter explores numerous themes and includes many cultural meanings and references.Major themes in the series include prejudice, corruption, madness, love, and death.</p>
-        </section>
-
-        <!-- Characters Section -->
-        <section id="characters">
-            <h2>Famous Characters</h2>
-            <div class="characters-grid">
-                <div class="character-card">Harry Potter</div>
-                <div class="character-card">Hermione Granger</div>
-                <div class="character-card">Ron Weasley</div>
-                <div class="character-card">Albus Dumbledore</div>
-                <div class="character-card">Lord Voldemort</div>
-                <div class="character-card">Hagrid</div>
-                <div class="character-card">Draco Malfoy</div>
-                <div class="character-card">Ginny Weasley</div>
-                <div class="character-card">Neville Longbottom</div>
-                <div class="character-card">Luna Lovegood</div>
-                <div class="character-card">Sirius Black</div>
-                <div class="character-card">Remus Lupin</div>
-                <div class="character-card">Severus Snape</div>
-                <div class="character-card">Fred Weasley</div>
-                <div class="character-card">George Weasley</div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <p class="text-center">The magic begins with Harry Potter!</p>
-            <div class="gallery">
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image 2.jpeg" alt="Image 2">
-                <img src="image 3.jpg" alt="Image 3">
-                <img src="image 4.jpg" alt="Image 4">
-                <img src="image 5.png" alt="Image 5">
-                <img src="image 6.jpg" alt="Image 6">
-
-
-            </div>
-        </section>
-
-        <!-- Videos Section -->
-        <section id="videos">
-            <h2>Videos</h2>
-            <p class="text-center">Watch a Magical Trailer!</p>
-            <video controls width="600">
-                <source src="HarryPotterTheSorcerersStoneTrailer2.mp4">
-            </video>
-        </section>
-
-        <!-- Resources Section -->
-        <section id="resources">
-            <h2>Resources</h2>
-            <ul class="resources-list">
-                <li><a href="https://en.wikipedia.org/wiki/Harry_Potter" target="_blank">Harry Potter Wikipedia</a></li>
-                <li><a href="https://www.warnerbros.com/movies/harry-potter-complete-8-film-collection">WarnerBros Harry Potter 8 Film Collection</a></li>
-            </ul>
-
-            <h2>House Points Table</h2>
-            <table class="house-points">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Symbol</th>
-                        <th>House</th>
-                        <th>Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><img src="gryffindor.jpg" alt="Gryffindor logo"></td>
-                        <td>Gryffindor</td>
-                        <td>300</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><img src="slytherin.jpg" alt="Slytherin logo"></td>
-                        <td>Slytherin</td>
-                        <td>250</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><img src="ravenclaw.jpg" alt="Ravenclaw logo"></td>
-                        <td>Ravenclaw</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><img src="hufflepuff.jpg" alt="Hufflepuff logo"></td>
-                        <td>Hufflepuff</td>
-                        <td>150</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="winner">
-                And the Winner is Gryffindor with 300 points!!
-            </div>
-        </section>
+  <section id="home">
+    <img src="disha.jpg" alt="Profile pic" class="profile-pic">
+    <div class="profile">
+      <h1>Hello,<br>I'm Disha Patil</h1>
+      <p>
+        I am currently pursuing a degree in Computer Science and Engineering (CSE) with a specialization in
+        Artificial Intelligence and Machine Learning (AIML).
+        I am passionate about exploring the limitless possibilities of AI, building innovative solutions, and
+        solving
+        real-world problems through technology.
+      </p>
     </div>
-    <footer>
-        <p>@ 2025 Harry Potter Fan Club. All rights reserved.</p>
-    </footer>
+  </section>
+
+  <section id="about">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="edu_item">
+        <h3>10th CBSE Board</h3>
+        <p>Podar International School, Wagholi, Pune</p>
+        <p>96.60%</p>
+      </div>
+
+      <div class="edu_item">
+        <h3>12th HSC Board</h3>
+        <p>Bhogavati Mahavidyalaya, Kolhapur</p>
+        <p>72%</p>
+      </div>
+
+      <div class="edu_item">
+        <h3>BTech Engineering</h3>
+        <p>Vishwakarma Institute Of Information Technology, Kondhwa</p>
+        <p>FY Completed (CGPA) - 8.55</p>
+        <p>SY Pursuing (SGPA) - 9.14</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Tech Stack</h2>
+    <div class="tech">
+      <div class="skills_item">
+        <p>C++</p>
+        <img src="cpp_logo.png" alt="CPP Logo">
+      </div>
+      <div class="skills_item">
+        <p>Java</p>
+        <img src="java_logo.png" alt="Java Logo">
+      </div>
+      <div class="skills_item">
+        <p>DSA</p>
+        <img src="DSA_logo.png" alt="DSA Logo">
+      </div>
+      <div class="skills_item">
+        <p>Python</p>
+        <img src="python_logo.png" alt="Python Logo">
+      </div>
+      <!-- <div class="skills_item">
+        <p>Machine Learning</p>
+        <img src="ML_logo.jpg" alt="Machine Learning Logo">
+      </div> -->
+      <div class="skills_item">
+        <p>Html</p>
+        <img src="HTML_logo.png" alt="HTML Logo">
+      </div>
+      <div class="skills_item">
+        <p>CSS</p>
+        <img src="CSS_logo.png" alt="CSS Logo">
+      </div>
+    </div>
+  </section>
+
+  <div id="projects">
+    <h2 class="phead">My Projects</h2>
+    <div class="proj">
+      <div class="project-item">
+        <h3>Project 1 <br>Hogwarts Chronicles: A Harry Potter fanpage(HTML + CSS)</h3>
+        <p>Created a basic Harry Potter-themed website using HTML and CSS, featuring interactive pages with Famous
+          characters, images, Trailers, House points table</p>
+
+        <h3>Project 2 <br>Vending Machine Simulation(DSA)</h3>
+        <p>Working of a vending machine by implementing the stack data structure to manage its operations efficiently.
+        </p>
+      </div>
+      <div class="project-item">
+        <h3>Project 3 <br>Inora: A chatbot for student assistance</h3>
+        <p>A smart, AI-powered chatbot designed to assist students with admission queries, provide personalized
+          guidance, and simplify access to academic and administrative information.</p>
+        <video controls width="300" autoplay muted>
+          <source src="inora_video.mp4">
+        </video>
+      </div>
+      <div class="project-item">
+        <h3>Project 4 <br>Smart Expense Tracker (Java + DSA)</h3>
+        <p>A Java-based application that efficiently tracks daily expenses using data structures for quickcategory-based
+          insights and sorting for monthly analysis</p>
+
+        <h3>Project 5 <br>Movie Recommendation System (Python + ML)</h3>
+        <p>A Python-powered project that suggests movies based on user preferences using collaborative filtering and
+          content-based algorithms.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2>Contact Me <img src="contact.png" height="30px" width="30px"></h2>
+    <div class="cinfo">
+      <h3><img src="gmail_logo.png" height="20px" width="20px"> MAIL</h3>
+      <p>patildisha2404@gmail.com</p>
+      <h3><img src="linkedin.png" height="20px" width="20px"> LINKEDIN</h3>
+      <p><a href="https://www.linkedin.com/in/disha-patil-290b26295" target="_blank">@disha-patil-290b26295</a></p>
+      <h3><img src="instagram_logo.png" alt="Instagram logo" height="20px" width="20px"> INSTAGRAM</h3>
+      <p>disha._.24</p>
+    </div>
+  </section>
+
 </body>
+
 </html>
